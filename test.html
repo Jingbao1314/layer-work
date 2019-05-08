@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:http="http://www.w3.org/1999/xhtml">
+<head>
+
+    <script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .max{
+            width: 50%;
+            height: auto;
+            /*border:1px dashed #ccc;*/
+            /*display: table-cell;*/
+            /*vertical-align: middle;*/
+            /*text-align: center;*/
+            margin: 50px auto;
+            border: 1px dashed #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .min{
+            width: 100px;
+            height: 100px;
+            /*display: table-cell;*/
+            /*vertical-align: middle;*/
+            /*text-align: center;*/
+        }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            $("img").click(function() {
+//                alert("test");
+                $(this).toggleClass('min',this.src);
+                $(this).toggleClass('max');
+//                $(this).css('background','')
+            });
+        });
+    </script>
+</head>
+
+
+<body>
+<img id="img" class="min" src="test.jpg">
+</body>
+
+
+</html>
+<!DOCTYPE html>
+<html>

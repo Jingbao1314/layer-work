@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:http="http://www.w3.org/1999/xhtml">
+<head>
+
+    <script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+    <script type="text/javascript" src="layer-v3.1.1/layer/layer.js"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+
+
+<body>
+<style>
+    .max{
+        width: 50%;
+        height: auto;
+        margin: 50px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .min{
+        width: 100px;
+        height: 100px;
+        /*display: table-cell;*/
+        /*vertical-align: middle;*/
+        /*text-align: center;*/
+    }
+</style>
+<!--<script type="text/javascript">-->
+    <!--$(function () {-->
+        <!--$("img").click(function() {-->
+<!--//                alert("test");-->
+            <!--$(this).toggleClass('min',this.src);-->
+            <!--$(this).toggleClass('max');-->
+<!--//                $(this).css('background','')-->
+        <!--});-->
+    <!--});-->
+<!--//</script>-->
+<!--<img id="img" style="width:50px;height:50px;" src="test.jpg"-->
+     <!--onclick=" ">-->
+<input type="image" onclick="layer.open({
+    type: 1,
+    title: false,
+    closeBtn: 0,
+    area: '516px',
+    offset: [
+        Math.random()*($(window).height()/2),
+        Math.random()*($(window).width()/2)],
+    skin: 'layui-layer-nobg', //没有背景色
+    shadeClose: true,
+    content:
+    '<img src=http://img.alicdn.com/imgextra/i1/454264567/TB2yR8aiHFkpuFjy1XcXXclapXa_!!454264567.jpg >'
+})" style="width:50px;height:50px;"
+       src="test.jpg" id="xx">
+
+</body>
+<script>
+    function xxxx(id) {
+        var times=localStorage.getItem("times");
+        if (times==null){
+            localStorage.setItem("times",1);
+        }
+        var t=document.getElementById(id);
+        if (times==1){
+            t.setAttribute("style","width: 50%;height: auto;margin: 50px auto;display: flex;justify-content: center;align-items: center;")
+            localStorage.setItem("times",2);
+        }else {
+            t.setAttribute("style","width: 50px;height: 50px;")
+            localStorage.setItem("times",1);
+        }
+
+
+//        this.style.width='100px';
+    }
+
+</script>
+
+</html>
